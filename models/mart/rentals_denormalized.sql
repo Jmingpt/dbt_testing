@@ -50,7 +50,9 @@ SELECT
     rental_rate,
     replacement_cost,
     payments,
-    actors
+    actors,
+    case when date_diff(return_date, rental_date, day) <= rental_duration then "On time"
+    else "Late" end as is_late_return
 FROM
   {{ ref('fct_rentals') }} fr
 LEFT JOIN
