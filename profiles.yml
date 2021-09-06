@@ -5,5 +5,5 @@ dvd_rental_dbt:
       type: bigquery
       method: oauth
       threads: 32
-      project: #YOUR_PROJECT_NAME
-      dataset: #YOUR_DATASET
+      project: tuantraining-jiaming
+      dataset: dvd_rental
